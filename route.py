@@ -10,3 +10,7 @@ def create_route(app):
             if d in ["user","item","kubun","category","dept","request"]:
                 return controller.get_json(d)
         return("GETパラメータを指定してください")
+    
+    
+
+

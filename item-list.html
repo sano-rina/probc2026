@@ -45,63 +45,55 @@
       </nav>
     </header>
     <!-- ここまでページ上部のヘッダ部 -->
-
-    <!-- ここからページのメインコンテンツ -->
+     <!-- ここからページのメインコンテンツ -->
     <main>
-      <div class="container">
+      <div class="container mt-4">
         <div class="row">
-            <div class="col p-5 text-white rounded mt-3 bg-success">
-                <h1 class="display-4 fst-italic">拾得物管理システム</h1>
-                <hr>
-                <p>このシステムは文教大学湘南キャンパスの施設内における拾得物を管理するためのシステムです．プロジェクト演習BCの授業において学習用の演習システムとして開発を行います．</p>
+          <div class="col">
+            <div class="input-group">
+                <span class="input-group-text">
+                    <i class="bi bi-search"></i>
+                </span>
+                <input type="text" class="form-control" placeholder="拾得物をキーワードで検索">
+                <button class="btn btn-success" type="button">
+                    検索
+                </button>
             </div>
+          </div>
         </div>
-        <div class="row mt-3">
-            <div class="col card m-1">
-                <div class="card-body">
-                    <h5 class="card-title">ユーザ登録</h5>
-                    <hr>
-                    <p class="card-text">拾得物・遺失物の登録を行う際に必要となるユーザの情報を登録するための機能です</p>
-                    <a href="#" class="btn btn-success">登録する</a>
-                </div>
-            </div>
-            <div class="col card m-1">
-                <div class="card-body">
-                    <h5 class="card-title">拾得物登録</h5>
-                    <hr>
-                    <p class="card-text">拾得物が発生した際に，拾得物の情報をシステムに登録するための機能です</p>
-                    <a href="#" class="btn btn-success">登録する</a>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col card m-1">
-                <div class="card-body">
-                    <h5 class="card-title">拾得物検索機能</h5>
-                    <hr>
-                    <p class="card-text">システムに登録されている拾得物のデータを対象として検索するための機能です<br>
-                    拾得物一覧もこちらから閲覧できます</p>
-                    <a href="#" class="btn btn-success">検索する</a>
-                </div>
-            </div>
-            <div class="col card m-1">
-                <div class="card-body">
-                    <h5 class="card-title">遺失物捜索依頼</h5>
-                    <hr>
-                    <p class="card-text">施設内で何か物を無くした際に，遺失物の捜索依頼を出すための機能です</p>
-                    <a href="#" class="btn btn-success">依頼する</a>
-                </div>
-            </div>
-        </div>
-      </div>
-    </main>    
-    <!-- ここまでページのメインコンテンツ -->
 
-    <!-- ここからページ下部のフッタ部 -->
-    <footer class="fixed-bottom bg-success text-light text-end">
-        <div>文教大学 情報学部 情報システム学科 プロジェクト演習BC</div>
-    </footer>
-    <!-- ここまでページ下部のフッタ部 -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  </body>
-</html>
+        <div class="card mt-4 mb-3">
+          <div class="row g-0">
+            <!-- 左：写真 -->
+            <div class="col-md-3">
+              <img src="wallet.jpg"    class="img-fluid
+              rounded-start" alt="拾得物">
+            </div>
+
+            <!-- 右：情報 -->
+             <div class="col-md-9">
+              <div class="card-body">
+                 <h5 class="card-title">
+                  <i class="bi bi-wallet2 me-2"></i>黒い財布
+                </h5>
+                <p class="card-text">
+                  <strong>特徴：</strong>革製、二つ折り、少し傷あり
+                </p>
+                <p class="card-text">
+                  <strong>拾得場所：</strong>3号館1階 廊下
+                </p>
+                <p class="card-text">
+                  <strong>拾得日時：</strong>2026/05/27
+                </p>
+
+
+              </div>
+             </div>
+
+          </div>
+        </div>
+        
+
+
+      </div>
+    </main>

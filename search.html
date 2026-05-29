@@ -25,14 +25,14 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">拾得物登録機能</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">拾得者（ユーザ）登録  <i class="bi bi-person"></i></a></i></li>
-                  <li><a class="dropdown-item" href="info_registration.html">拾得物登録 <i class="bi bi-file-earmark-arrow-up"></i></a></li>
+                  <li><a class="dropdown-item" href="#">拾得物登録 <i class="bi bi-file-earmark-arrow-up"></i></a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="item-list.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">拾得物検索機能</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="item-list.html">拾得物検索 <i class="bi bi-search"></i></a></li>
-                  <li><a class="dropdown-item" href="lost_request.html">遺失物捜索依頼 <i class="bi bi-file-earmark-check"></i></a></li>
+                  <li><a class="dropdown-item" href="#">遺失物捜索依頼 <i class="bi bi-file-earmark-check"></i></a></li>
                   <!--<li><a class="dropdown-item" href="#">遺失物捜索一覧 <i class="bi bi-table"></i></a></li> 
                   <li><a class="dropdown-item" href="#">帳票ダウンロード <i class="bi bi-download"></i></a></li>管理者のみに表示-->
                 </ul>
@@ -45,64 +45,154 @@
       </nav>
     </header>
     <!-- ここまでページ上部のヘッダ部 -->
-    <main>
-      <div class="container mt-4">
+    
 
-      <!-- 見出し -->
-      <h2 class="mb-4">
-        <i class="bi bi-search me-2"></i>検索結果
-      </h2>
+     
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>検索画面</title>
 
-      <!-- 1件目 -->
-      <div class="card mb-3">
-        <div class="row g-0">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-          <!-- 左：写真 -->
-          <div class="col-md-3">
-            <img src="wallet.jpg" class="img-fluid rounded-start" alt="拾得物">
-          </div>
+  <style>
+    body {
+      background-color: #f4f8fc;
+    }
 
-          <!-- 右：情報 -->
-          <div class="col-md-9">
-            <div class="card-body">
-              <h5 class="card-title">黒い財布</h5>
-              <p class="card-text">
-                <strong>特徴：</strong>革製、二つ折り
-              </p>
-              <p class="card-text">
-                <strong>拾得場所：</strong>3号館1階
-              </p>
-            </div>
-          </div>
+    .main-box {
+      background-color: white;
+      border-radius: 15px;
+      padding: 30px;
+      margin-top: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
 
+    .title {
+      color: #0d6efd;
+      font-weight: bold;
+      margin-bottom: 25px;
+    }
+
+    footer {
+      background-color: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      margin-top: 50px;
+    }
+
+    .btn-search {
+      width: 120px;
+    }
+
+    table {
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ヘッダー -->
+  <nav class="navbar navbar-dark bg-primary">
+    <div class="container-fluid">
+      <span class="navbar-brand mb-0 h1">
+        拾得物届出・管理システム
+      </span>
+    </div>
+  </nav>
+
+  <!-- メイン -->
+  <div class="container">
+
+    <div class="main-box">
+
+      <h2 class="title">拾得物検索</h2>
+
+      <!-- 検索フォーム -->
+      <div class="row g-3">
+
+        <div class="col-md-4">
+          <label class="form-label">拾得物名</label>
+          <input type="text" class="form-control" placeholder="例：財布">
         </div>
+
+        <div class="col-md-4">
+          <label class="form-label">カテゴリー</label>
+          <select class="form-select">
+            <option>選択してください</option>
+            <option>財布</option>
+            <option>スマートフォン</option>
+            <option>鍵</option>
+            <option>その他</option>
+          </select>
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">拾得日</label>
+          <input type="date" class="form-control">
+        </div>
+
       </div>
 
-      <!-- 2件目 -->
-      <div class="card mb-3">
-        <div class="row g-0">
+      <!-- ボタン -->
+      <div class="mt-4 text-center">
+        <button class="btn btn-primary btn-search">
+          検索
+        </button>
 
-          <div class="col-md-3">
-            <img src="umbrella.jpg" class="img-fluid rounded-start" alt="拾得物">
-          </div>
-
-          <div class="col-md-9">
-            <div class="card-body">
-              <h5 class="card-title">青い折りたたみ傘</h5>
-              <p class="card-text">
-                <strong>特徴：</strong>青色、持ち手黒
-              </p>
-              <p class="card-text">
-                <strong>拾得場所：</strong>食堂前
-              </p>
-            </div>
-          </div>
-
-        </div>
+        <button class="btn btn-secondary btn-search">
+          リセット
+        </button>
       </div>
-      <p>この先条件一致した拾得物を一覧表示</p>
+
+      <!-- 検索結果 -->
+      <table class="table table-bordered table-hover text-center">
+
+        <thead class="table-primary">
+          <tr>
+            <th>ID</th>
+            <th>拾得物名</th>
+            <th>カテゴリー</th>
+            <th>拾得日</th>
+            <th>状態</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>001</td>
+            <td>黒い財布</td>
+            <td>財布</td>
+            <td>2026/05/28</td>
+            <td>保管中</td>
+          </tr>
+
+          <tr>
+            <td>002</td>
+            <td>iPhone</td>
+            <td>スマートフォン</td>
+            <td>2026/05/27</td>
+            <td>返却済</td>
+          </tr>
+        </tbody>
+
+      </table>
 
     </div>
+
+  </div>
+
+  <!-- フッター -->
+  <footer>
+    © 2026 拾得物届出・管理システム
+  </footer>
+
+</body>
+</html>
     <div class="container mt-4 mb-5">
       <a href="index.html" class="btn btn-outline-success">
         <i class="bi bi-arrow-left-circle me-1"></i>
@@ -110,7 +200,6 @@
       </a>
     </div>
   </main>
- 
   <!-- ここからページ下部のフッタ部 -->
     <footer class="fixed-bottom bg-success text-light text-end">
       <div>文教大学 情報学部 情報システム学科 プロジェクト演習BC</div>

@@ -15,7 +15,7 @@
     <header>
       <nav class="navbar navbar-expand-lg bg-success navbar-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#"><i class="bi bi-search"></i> 拾得物管理システム</a>
+          <a class="navbar-brand" href="1.index.html"><i class="bi bi-search"></i> 拾得物管理システム</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span><!--ハンバーガーメニューの生成-->
           </button>
@@ -25,14 +25,14 @@
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">拾得物登録機能</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                   <li><a class="dropdown-item" href="#">拾得者（ユーザ）登録  <i class="bi bi-person"></i></a></i></li>
-                  <li><a class="dropdown-item" href="#">拾得物登録 <i class="bi bi-file-earmark-arrow-up"></i></a></li>
+                  <li><a class="dropdown-item" href="3.item_registration.html">拾得物登録 <i class="bi bi-file-earmark-arrow-up"></i></a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">拾得物検索機能</a>
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="item-list.html">拾得物検索 <i class="bi bi-search"></i></a></li>
-                  <li><a class="dropdown-item" href="#">遺失物捜索依頼 <i class="bi bi-file-earmark-check"></i></a></li>
+                  <li><a class="dropdown-item" href="2.item-list.html">拾得物検索 <i class="bi bi-search"></i></a></li>
+                  <li><a class="dropdown-item" href="13.lost_request.html">遺失物捜索依頼 <i class="bi bi-file-earmark-check"></i></a></li>
                   <!--<li><a class="dropdown-item" href="#">遺失物捜索一覧 <i class="bi bi-table"></i></a></li> 
                   <li><a class="dropdown-item" href="#">帳票ダウンロード <i class="bi bi-download"></i></a></li>管理者のみに表示-->
                 </ul>
@@ -45,41 +45,43 @@
     <!-- ここまでページ上部のヘッダ部 -->
 
     <!-- ここからページのメインコンテンツ -->
-    <main>
-      <div class="container">
-        <div class="row">
-            <div class="col p-5 text-white rounded mt-3 bg-success">
-                <h1 class="display-4 fst-italic">管理者ログイン</h1><br>
-                <p class="lead my-3">管理者IDとパスワードを入力してログインしてください。</p>
+<main class="d-flex align-items-center" style="min-height: calc(100vh - 56px - 24px); background-color: #f8f9fa;">
+      <div class="container my-5">
+        
+        <div class="row justify-content-center">
+          <div class="col-12 col-md-8 col-lg-6">
+            <div class="d-grid gap-4">
+              
+              <a href="2.item-list.html" class="btn btn-lg py-3 fs-4 fw-bold shadow-sm" 
+                 style="background-color: #e5ffef; border: 2px solid #000; color: #000; border-radius: 15px;">
+                落とし物一覧
+              </a>
+              
+              <a href="11.ad_detail.html" class="btn btn-lg py-3 fs-4 fw-bold shadow-sm" 
+                 style="background-color: #e5ffef; border: 2px solid #000; color: #000; border-radius: 15px;">
+                落とし物一覧編集
+              </a>
+              
+              <a href="12.lost_request_list.html" class="btn btn-lg py-3 fs-4 fw-bold shadow-sm" 
+                 style="background-color: #e5ffef; border: 2px solid #000; color: #000; border-radius: 15px;">
+                検索依頼申請一覧
+              </a>
+              
             </div>
+          </div>
         </div>
-        <div class="row mt-3">
-            <div class="col p-5 rounded bg-light">
-                <form style="max-width: 600px; margin: 0 auto;">
-                    <div class="mb-4">
-                        <label for="adminId" class="form-label fw-bold text-dark fs-5">管理者ID</label>
-                        <input type="text" class="form-control form-control-lg rounded-3" id="adminId" style="background-color: #e5ffef; border: 2px solid #000;">
-                    </div>
-                    
-                    <div class="mb-4">
-                        <label for="password" class="form-label fw-bold text-dark fs-5">パスワード</label>
-                        <input type="password" class="form-control form-control-lg rounded-3" id="password" style="background-color: #e5ffef; border: 2px solid #000;">
-                    </div>
-                    
-                    <div class="text-end">
-                        <button type="submit" class="btn btn-lg fw-bold px-4" style="background-color: #e5ffef; border: 2px solid #000; color: #000;">ログイン</button>
-                    </div>
-                </form>
-            </div>
+
+        <div class="row mt-5">
+          <div class="col-12 d-flex justify-content-end">
+            <a href="4.administrator_login.html" class="btn px-4 py-2 fs-5 fw-bold" 
+               style="background-color: #e5ffef; border: 2px solid #000; color: #000; border-radius: 0px; min-width: 150px; text-align: center;">
+              ログアウト
+            </a>
+          </div>
         </div>
+
       </div>
-      <div class="container mt-4 mb-5">
-        <a href="index.html" class="btn btn-outline-success">
-          <i class="bi bi-arrow-left-circle me-1"></i>
-        トップページに戻る
-        </a>
-      </div>
-    </main>    
+    </main>
     <!-- ここまでページのメインコンテンツ -->
 
     <!-- ここからページ下部のフッタ部 -->

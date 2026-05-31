@@ -21,6 +21,91 @@
     footer{
         padding:8px 15px;
     }
+
+    .check-box-in{
+    margin: 10px 0;
+    }
+
+    input[type=checkbox] {
+      display: none;
+    }
+
+    label {
+      font-size: 18px;
+      box-sizing: border-box;
+      cursor: pointer;
+      display: inline-block;
+      padding: 5px 0 5px 42px;
+      position: relative;
+      width: auto;
+    }
+
+    label::before {
+      border: 4px solid #b9b9b9;
+      content: '';
+      display: block;
+      width: 80px;
+      height: 80px;
+      left: 0;
+      margin-top: -17px;
+      position: absolute;
+      top: 50%;
+      border-radius: 50px;
+    }
+
+    label::after {
+      border-right: 5px solid #2f9846;
+      border-top: 5px solid #2f9846;  
+      content: '';
+      display: block;
+      height: 30px;
+      left: 50%;
+      opacity: 0;
+      position: absolute;
+      top: 35px;
+      width: 15px;
+      transform-origin: left top;
+      transform: scaleX(-1) rotate(135deg);
+    }
+
+    input[type=checkbox]:checked + label::before{
+      animation: box 0.8s;
+      border: 4px solid #2f9846;
+    }
+
+    input[type=checkbox]:checked + label::after {
+      opacity: 1;
+      animation: check 0.8s;
+    }
+
+    @keyframes check {
+      0% {
+        height: 0;
+        width: 0;
+        opacity: 0;
+      }
+      40% {
+      height: 0;
+      width: 15px;
+      opacity: 1;
+      }
+      100% {
+        height: 30px;
+        width: 15px;
+        opacity: 1;
+      }
+    }
+
+    @keyframes box {
+        0% {
+          transform: scale(0.8);
+          opacity: 0;
+        }
+        100% { transform: scale(1);
+        opacity: 1; }
+    }
+
+
     </style>
   </head>
 
@@ -122,8 +207,12 @@
       </div>
 
       <div class="text-center py-5">
-        <div class="display-1 text-success mb-4">
-          <i class="bi bi-check-circle"></i>
+        <div class="text-center pt-0 pb-5">
+          <div class="check-box">
+            <div class="check-box-in">
+              <input id="01" type="checkbox" name="r" value="1" checked>
+              <label for="01"></label>
+            </div>
         </div>
         <h1 class="display-4 fw-bold">登録完了しました！</h1>
       </div>

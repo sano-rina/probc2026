@@ -29,17 +29,17 @@
     width: 100%;
     margin: 0;
     text-align: center;
-}
+  }
 
-.check-box-in{
-  margin: 10px 0;
-}
+  .check-box-in{
+    margin: 10px 0;
+  }
 
-input[type=checkbox] {
+  input[type=checkbox] {
     display: none;
-}
+  }
 
-label {
+  label {
     font-size: 18px;
     box-sizing: border-box;
     cursor: pointer;
@@ -47,9 +47,9 @@ label {
     padding: 5px 0 5px 42px;
     position: relative;
     width: auto;
-}
+  }
 
-label::before {
+  label::before {
     border: 4px solid #b9b9b9;
     content: '';
     display: block;
@@ -60,11 +60,11 @@ label::before {
     position: absolute;
     top: 50%;
     border-radius: 50px;
-}
+  }
 
-label::after {
-    border-right: 4px solid #2f9846;
-    border-top: 4px solid #2f9846;  
+  label::after {
+    border-right: 5px solid #2f9846;
+    border-top: 5px solid #2f9846;  
     content: '';
     display: block;
     height: 30px;
@@ -75,36 +75,43 @@ label::after {
     width: 15px;
     transform-origin: left top;
     transform: scaleX(-1) rotate(135deg);
-}
+  }
 
-input[type=checkbox]:checked + label::before{
+  input[type=checkbox]:checked + label::before{
     animation: box 0.8s;
     border: 4px solid #2f9846;
-}
+  }
 
-input[type=checkbox]:checked + label::after {
+  input[type=checkbox]:checked + label::after {
     opacity: 1;
     animation: check 0.8s;
-}
+  }
 
 @keyframes check {
   0% {
     height: 0;
     width: 0;
+    opacity: 0;
   }
-  25% {
+  40% {
     height: 0;
-    width: 7px;
+    width: 15px;
+    opacity: 1;
   }
-  50% {
-    height: 13px;
-    width: 7px;
+  100% {
+    height: 30px;
+    width: 15px;
+    opacity: 1;
   }
 }
 
 @keyframes box {
-    0% { transform: scaleX(-1) rotate(170deg); }
-    30% { transform: scaleX(-1) rotate(135deg); }
+    0% {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    100% { transform: scale(1);
+    opacity: 1; }
 }
   </style>
   </head>

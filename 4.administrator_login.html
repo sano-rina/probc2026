@@ -11,32 +11,41 @@
   </head>
 
   <body class="bg-light">
-
     <header>
       <nav class="navbar navbar-expand-lg bg-success navbar-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="1.index.html">
-            <i class="bi bi-search"></i> 拾得物管理システム
-          </a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
-            <span class="navbar-toggler-icon"></span>
+          <a class="navbar-brand" href="1.index.html"><i class="bi bi-search"></i> 拾得物管理システム</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span><!--ハンバーガーメニューの生成-->
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                  拾得物登録機能
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">拾得者（ユーザ）登録 <i class="bi bi-person"></i></a></li>
-                  <li><a class="dropdown-item" href="register.html">拾得物登録 <i class="bi bi-file-earmark-arrow-up"></i></a></li>
+                <a class="nav-link dropdown-toggle" href="item-list.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">拾得物登録機能</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">拾得者（ユーザ）登録  <i class="bi bi-person"></i></a></i></li>
+                  <li><a class="dropdown-item" href="3.item_registration.html">拾得物登録 <i class="bi bi-file-earmark-arrow-up"></i></a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="2.item-list.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">拾得物検索機能</a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="5.search.html">拾得物検索 <i class="bi bi-search"></i></a></li>
+                  <li><a class="dropdown-item" href="13.lost_request.html">遺失物捜索依頼 <i class="bi bi-file-earmark-check"></i></a></li>
+                  <!--<li><a class="dropdown-item" href="#">遺失物捜索一覧 <i class="bi bi-table"></i></a></li> 
+                  <li><a class="dropdown-item" href="#">帳票ダウンロード <i class="bi bi-download"></i></a></li>管理者のみに表示-->
                 </ul>
               </li>
             </ul>
+            <a href="#" class="btn btn-light ms-auto">
+              <i class="bi bi-person-lock"></i> 管理者ログイン</a>
           </div>
         </div>
       </nav>
     </header>
+    <!-- ここまでページ上部のヘッダ部 -->
+
+    <!-- ここからページのメインコンテンツ -->
 
     <main>
       <form action="7.administration_top.html" method="get">
@@ -87,11 +96,12 @@
           </div>
         </div>
 
-        <div class="container mb-5" style="max-width: 650px;">
-          <a href="1.index.html" class="btn btn-outline-secondary btn-lg">
-            ←戻る
-          </a>
-        </div>
+        <div class="container mt-4 mb-5">
+        <a href="index.html" class="btn btn-outline-success">
+          <i class="bi bi-arrow-left-circle me-1"></i>
+        トップページに戻る
+        </a>
+      </div>
 
       </form>
     </main>
